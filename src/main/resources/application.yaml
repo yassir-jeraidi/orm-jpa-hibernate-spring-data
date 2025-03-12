@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: orm-jpa-hibernate-spring-data
+
+  datasource:
+    url: jdbc:h2:mem:patients
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+  h2:
+    console:
+      enabled: true
+

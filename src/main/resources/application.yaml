@@ -3,11 +3,16 @@ spring:
     name: orm-jpa-hibernate-spring-data
 
   datasource:
-    url: jdbc:h2:mem:patients
-    driver-class-name: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/patients?createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    #url: jdbc:h2:mem:patients
+    #driver-class-name: org.h2.Driver
 
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    #database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
 
